@@ -13,11 +13,11 @@ className=' bg-gray-200 flex justify-center items-center h-fit py-20
 
 
 >
-<div class="flex items-stretch justify-between w-1/2 space-x-20 text-center
+<div className="flex items-stretch justify-between w-1/2 space-x-20 text-center
 
 
 ">
-  <div class="">
+  <div className="">
   <span className="material-icons">sell</span> 
    <h2>Trade In</h2> 
 <p>Got used retro games? Trade them in today for cash or store credit.</p>
@@ -33,7 +33,8 @@ className=' bg-gray-200 flex justify-center items-center h-fit py-20
             
             '>Get Started</button>
     </div>
-  <div class=""> <span className="material-icons">sell</span> 
+  <div className="">
+     <span className="material-icons">sell</span> 
    <h2>Trade In</h2> 
 <p>Got used retro games? Trade them in today for cash or store credit.</p>
 
@@ -47,7 +48,8 @@ className=' bg-gray-200 flex justify-center items-center h-fit py-20
             rounded-lg
             
             '>Get Started</button></div>
-  <div class=""> <span className="material-icons">sell</span> 
+  <div className=""> 
+  <span className="material-icons">sell</span> 
    <h2>Trade In</h2> 
 <p>Got used retro games? Trade them in today for cash or store credit.</p>
 
