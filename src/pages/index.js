@@ -5,6 +5,7 @@ import QuickLinks from '@/components/QuickLinks';
 import MainHeader from '@/components/MainHeader';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import ProductCards from '@/components/ProductCards';
 
 export default function Home() {
 const [dataResponse, setdataResponse] = useState([]);
@@ -40,68 +41,8 @@ const [dataResponse, setdataResponse] = useState([]);
        <div className='container  mx-20'>
         <h2 className="text-2xl py-10">Shop Games</h2>
 
-
-        <div>
-        {dataResponse.map((product => {
-          return(
-            <div key={product.product_id}>
-
-
-
-            <div
-    className="block max-w-sm  rounded-lg bg-light shadow-lg ">
-    <a href="#!">
-    <img className="rounded-t-lg" src={"https://raw.githubusercontent.com/cbarnett358/levelUP-Images/main/levelup-game-covers/" + product.product_id + ".png"} />
-
-      
-    </a>
-    <div className="p-6">
-      <h5
-        className="mb-2 text-xl font-medium leading-tight text-pink-600 ">
-        {product.product_name}
-      </h5>
-      <p className="mb-2 text-base text-dark">
-      ${product.product_price}
-      </p>
-      <p className="mb-2 text-base text-dark">
-      {product.product_platform}
-      </p>
-      
-      <div className="flex mb-4 items-center">
-          <span className="material-icons text-tertiary">star</span>
-          <span className="material-icons text-tertiary">star</span>
-          <span className="material-icons text-tertiary">star</span>
-          <span className="material-icons text-tertiary">star</span>
-          <span className="material-icons text-tertiary">star</span>
-        </div>
-      <div className="space-x-3">
-      <button
-        type="button"
-        className="inline-block rounded bg-secondary text-light px-4 py-2 text-sm font-medium"
-        data-te-ripple-init
-        data-te-ripple-color="light">
-        Add to Cart
-      </button>
-      <button
-        type="button"
-        className="inline-block rounded bg-tertiary text-dark px-4 py-2 text-sm font-medium"
-        data-te-ripple-init
-        data-te-ripple-color="light">
-        Trade In
-      </button>
-      </div>
-    </div>
-  </div>
-
-
-            </div>
-
-
-          );
-        }))}
-
-
-        </div>
+<ProductCards></ProductCards>
+        
 
         <div className="flex justify-left mt-4">
   

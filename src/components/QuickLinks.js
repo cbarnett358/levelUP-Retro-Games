@@ -2,7 +2,7 @@
 import React from 'react';
 
 
-function QuickLinks() {
+function Home() {
 
 
     return (
@@ -70,5 +70,5 @@ className=' bg-tertiary flex justify-center items-center h-fit py-8
     )
 }
 
-export default QuickLinks;
+export default Home;
 
