@@ -15,7 +15,7 @@ const dbconnection = await mysql.createConnection({
 try {
     
 
-    const query = "SELECT product_id, product_name, product_description FROM products";
+    const query = "SELECT * FROM products";
     const values = []
     const [data] = await dbconnection.execute(query, values);
     dbconnection.end();

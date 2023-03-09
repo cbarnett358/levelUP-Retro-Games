@@ -4,7 +4,7 @@ import HeroSection from '@/components/HeroSection';
 import QuickLinks from '@/components/QuickLinks';
 import MainHeader from '@/components/MainHeader';
 import { useEffect, useState } from 'react';
- 
+import Image from 'next/image';
 
 export default function Home() {
 const [dataResponse, setdataResponse] = useState([]);
@@ -37,16 +37,63 @@ const [dataResponse, setdataResponse] = useState([]);
 
     <QuickLinks></QuickLinks>
     <section>
-       <div className='container pt-10 mx-20'>
-        <h2 className="text-2xl">Shop Games</h2>
+       <div className='container  mx-20'>
+        <h2 className="text-2xl py-10">Shop Games</h2>
 
 
         <div>
         {dataResponse.map((product => {
           return(
             <div key={product.product_id}>
-            <div className="text-2xl text-secondary">{product.product_name}</div>
-            <div className="text-dark">{product.product_description}</div>
+
+
+
+            <div
+    className="block max-w-sm  rounded-lg bg-light shadow-lg ">
+    <a href="#!">
+    <img className="rounded-t-lg" src={"https://raw.githubusercontent.com/cbarnett358/levelUP-Images/main/levelup-game-covers/" + product.product_id + ".png"} />
+
+      
+    </a>
+    <div className="p-6">
+      <h5
+        className="mb-2 text-xl font-medium leading-tight text-pink-600 ">
+        {product.product_name}
+      </h5>
+      <p className="mb-2 text-base text-dark">
+      ${product.product_price}
+      </p>
+      <p className="mb-2 text-base text-dark">
+      {product.product_platform}
+      </p>
+      
+      <div className="flex mb-4 items-center">
+          <span className="material-icons text-tertiary">star</span>
+          <span className="material-icons text-tertiary">star</span>
+          <span className="material-icons text-tertiary">star</span>
+          <span className="material-icons text-tertiary">star</span>
+          <span className="material-icons text-tertiary">star</span>
+        </div>
+      <div className="space-x-3">
+      <button
+        type="button"
+        className="inline-block rounded bg-secondary text-light px-4 py-2 text-sm font-medium"
+        data-te-ripple-init
+        data-te-ripple-color="light">
+        Add to Cart
+      </button>
+      <button
+        type="button"
+        className="inline-block rounded bg-tertiary text-dark px-4 py-2 text-sm font-medium"
+        data-te-ripple-init
+        data-te-ripple-color="light">
+        Trade In
+      </button>
+      </div>
+    </div>
+  </div>
+
+
             </div>
 
 
@@ -57,49 +104,7 @@ const [dataResponse, setdataResponse] = useState([]);
         </div>
 
         <div className="flex justify-left mt-4">
-  <div
-    className="block max-w-sm rounded-lg bg-light shadow-lg ">
-    <a href="#!">
-      <img 
-        
-        className="rounded-t-lg"
-        src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
-        alt="" />
-    </a>
-    <div className="p-6">
-      <h5
-        className="mb-2 text-xl font-medium leading-tight text-pink-600 ">
-        Card title
-      </h5>
-      <p className="mb-2 text-base text-neutral-800">
-        Some quick example text to build on the card title and make up the
-        bulk of the cards content.
-      </p>
-      <div className="flex mb-4 items-center">
-          <span className="material-icons">star</span>
-          <span className="material-icons">star</span>
-          <span className="material-icons">star</span>
-          <span className="material-icons">star</span>
-          <span className="material-icons">star</span>
-        </div>
-      <div className="space-x-3">
-      <button
-        type="button"
-        className="inline-block rounded bg-pink-600 text-white px-4 py-2 text-sm font-medium"
-        data-te-ripple-init
-        data-te-ripple-color="light">
-        Add to Cart
-      </button>
-      <button
-        type="button"
-        className="inline-block rounded bg-yellow-300 text-dark px-4 py-2 text-sm font-medium"
-        data-te-ripple-init
-        data-te-ripple-color="light">
-        Trade In
-      </button>
-      </div>
-    </div>
-  </div>
+  
 </div>
        </div>
         </section>
