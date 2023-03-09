@@ -3,9 +3,23 @@ import 'material-icons/iconfont/material-icons.css';
 import HeroSection from '@/components/HeroSection';
 import QuickLinks from '@/components/QuickLinks';
 import MainHeader from '@/components/MainHeader';
+import { useEffect, useState } from 'react';
  
 
 export default function Home() {
+const [dataResponse, setdataResponse] = useState([]);
+
+  useEffect(() => {
+    async function getPageData() {
+      const apiUrlEndpoint = `http://localhost:3000/api/getdata`;
+      const response = await fetch (apiUrlEndpoint);
+      const res = await response.json();
+      console.log(res.products);
+      setdataResponse(res.products);
+    }
+    getPageData();
+  }, []);
+
   return (
     <>
       <Head>
@@ -25,6 +39,23 @@ export default function Home() {
     <section>
        <div className='container pt-10 mx-20'>
         <h2 className="text-2xl">Shop Games</h2>
+
+
+        <div>
+        {dataResponse.map((product => {
+          return(
+            <div key={product.product_id}>
+            <div className="text-2xl text-secondary">{product.product_name}</div>
+            <div className="text-dark">{product.product_description}</div>
+            </div>
+
+
+          );
+        }))}
+
+
+        </div>
+
         <div className="flex justify-left mt-4">
   <div
     className="block max-w-sm rounded-lg bg-light shadow-lg ">

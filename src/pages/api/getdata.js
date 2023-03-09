@@ -15,17 +15,15 @@ const dbconnection = await mysql.createConnection({
 try {
     
 
-    const query = "SELECT * FROM products";
+    const query = "SELECT product_id, product_name, product_description FROM products";
     const values = []
-    const [results] = await dbconnection.execute(query, values)
+    const [data] = await dbconnection.execute(query, values);
+    dbconnection.end();
 
+    res.status(200).json({products: data });
+
+} catch (error) {
 
 }
 
-catch (error) {
-    res.status(500).json({ error: error.message });
 }
-
-    //res.status(200).json({ name: 'John Doe' })
-}
-
