@@ -24,12 +24,13 @@ export default function Home() {
     <QuickLinks></QuickLinks>
     <section>
        <div className='container pt-10 mx-20'>
-        <h2 className="text-2xl">Shop Featured Games</h2>
+        <h2 className="text-2xl">Shop Games</h2>
         <div className="flex justify-left mt-4">
   <div
-    className="block max-w-sm rounded-lg bg-gray-200 shadow-lg ">
+    className="block max-w-sm rounded-lg bg-light shadow-lg ">
     <a href="#!">
-      <img
+      <img 
+        
         className="rounded-t-lg"
         src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"
         alt="" />
@@ -41,7 +42,7 @@ export default function Home() {
       </h5>
       <p className="mb-2 text-base text-neutral-800">
         Some quick example text to build on the card title and make up the
-        bulk of the card's content.
+        bulk of the cards content.
       </p>
       <div className="flex mb-4 items-center">
           <span className="material-icons">star</span>

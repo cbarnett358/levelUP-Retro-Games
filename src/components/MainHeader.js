@@ -8,7 +8,7 @@ function MainHeader() {
 
     return (
         <section
-        className="bg-purple-600 ">
+        className="bg-primary ">
          <nav className='drop-shadow-lg p-10 mb-0 flex justify-between text-white'>
  <div className="flex ">
          <span className="material-icons">menu</span> 

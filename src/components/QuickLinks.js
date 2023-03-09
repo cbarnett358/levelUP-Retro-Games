@@ -7,8 +7,8 @@ function QuickLinks() {
 
     return (
         <section
-className=' bg-gray-200 flex justify-center items-center h-fit py-20
--mt-44 mx-20 drop-shadow-lg rounded-2xl
+className=' bg-tertiary flex justify-center items-center h-fit py-8
+-mt-28 mx-20 drop-shadow-lg rounded-2xl
 '
 
 

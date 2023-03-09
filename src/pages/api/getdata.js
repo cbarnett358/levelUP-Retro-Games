@@ -13,6 +13,7 @@ const dbconnection = await mysql.createConnection({
 });
 
 try {
+    
 
     const query = "SELECT * FROM products";
     const values = []

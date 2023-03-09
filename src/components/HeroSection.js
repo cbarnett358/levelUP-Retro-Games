@@ -1,53 +1,60 @@
 //make react component
 import React from 'react';
-
+import leveluphero from 'public/leveluphero.png';
 
 function HeroSection() {
 
 
     return (
-        <section className='
-        z-0
-        flex
-        justify-center
-        items-center
-        h-fit
-        drop-shadow-lg
-        pt-20
-        pb-60
+        <section
+        className='bg-light
+        flex justify-center items-center h-fit pt-8 pb-40
+ drop-shadow-lg 
+        
+        '
+        >
+      
 
-        bg-gray-800
-        '>
-          <div className='
-          flex
-          flex-col
-          mx-4
-          text-center
-          items-center
-          '>
-
-            <h1 className='
-            text-6xl
-            font-bold
-            text-white
-
-            '>levelUP Games</h1>
-            <p className='
-            text-2xl
-            text-white
-            '>The best place to find the latest and greatest games</p>
+      <div className="flex flex-col-reverse md:flex-row justify-center items-center mx-24">
+        <div className="flex flex-col justify-center items-center md:items-start md:justify-start md:w-1/2">
+          <h1 className="text-4xl md:text-6xl font-bold text-center text-secondary md:text-left">levelUP Your Collection</h1>
+          <p className="text-dark text-center mt-2 md:text-left">We buy and sell retro games and consoles. also trade in also trade in also trade in also trade in also trade in also trade in also trade in also trade in also trade in also trade in also trade in also trade in We also trade in games for cash or store credit.</p>
+          <div className="flex flex-col md:flex-row justify-center items-center mt-4">
             <button className='
-            bg-pink-600
-            text-white
+            bg-secondary
+            text-light
             font-bold
-            py-4
-            px-8
-
+            py-2
+            px-4
             rounded-lg
-            mt-6
-            '>Get Started</button>
-          </div>
+            md:mr-4
+            '>Shop Now</button>
+            <button className='
+            bg-tertiary
+            text-dark
+            font-bold
+            py-2
+            px-4
+            rounded-lg
+            md:mr-4
+            '>Trade In</button>
+
+            </div>
+
+        </div>
+        <div className="flex justify-center items-center md:w-1/2">
+          <img className='
+          w-3/4
+          '
+          
+          src="./leveluphero.png" alt="leveluphero" />
+ 
+        </div>
+      </div>
+
+
         </section>
+        
     )
 }
 
