@@ -18,10 +18,11 @@ justify-between  space-x-20 text-center
 
 
 ">
-  <div className="">
-  <span className="material-icons">sell</span> 
-   <h2>Trade In</h2> 
-<p>Got used retro games? Trade them in today for cash or store credit.</p>
+  <div >
+  <span className="material-icons text-dark">sell</span> 
+   <h2 className='text-dark font-mainfont text-2xl'>Trade In</h2> 
+<p className='
+px-4 text-dark text-center content'>Got usessspod retro games? Trade them in today for cash or store credit.</p>
 
    <button className='
             
@@ -35,9 +36,10 @@ justify-between  space-x-20 text-center
             '>Get Started</button>
     </div>
   <div className="">
-     <span className="material-icons">sell</span> 
-   <h2>Trade In</h2> 
-<p>Got used retro games? Trade them in today for cash or store credit.</p>
+     <span className="text-dark material-icons">sell</span> 
+   <h2 className='text-dark'>Trade In</h2> 
+<p className='
+px-4 text-dark'>Got used retro games? Trade them in today for cash or store credit.</p>
 
    <button className='
             
@@ -50,9 +52,10 @@ justify-between  space-x-20 text-center
             
             '>Get Started</button></div>
   <div className=""> 
-  <span className="material-icons">sell</span> 
-   <h2>Trade In</h2> 
-<p>Got used retro games? Trade them in today for cash or store credit.</p>
+  <span className="text-dark material-icons">sell</span> 
+   <h2 className='text-dark'>Trade In</h2> 
+<p className='
+px-4 text-dark'>Got used retro games? Trade them in today for cash or store credit.</p>
 
    <button className='
             

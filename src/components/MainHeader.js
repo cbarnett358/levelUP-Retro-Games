@@ -9,15 +9,15 @@ function MainHeader() {
     return (
         <section
         className="bg-primary ">
-         <nav className='drop-shadow-lg p-10 mb-0 flex justify-between text-white'>
+         <nav className='drop-shadow-lg  p-8 mb-0 flex justify-between text-white'>
  <div className="flex ">
-         <span className="material-icons">menu</span> 
-        <Image src="/levelUP_Logo.png " alt="levelUP Games" width={200} height={200} className="ml-4" /> 
+        <Image src="/levelUP_Logo.png " alt="levelUP Games" width={200} height={200} className="" /> 
         </div>
  
            <ul className='
            flex
           space-x-4
+          mt-2
            '>
          
              <li >        <span className="material-icons ">account_circle</span> 
