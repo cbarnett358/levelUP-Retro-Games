@@ -28,6 +28,19 @@ export function addToCart(product) {
 
 
 
+//function for trading in that subtracts the price of the product from the total
+export function tradeIn(product) {
+    
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const productExists = cart.find((p) => p.product_id === product.product_id);
+    if (productExists) {
+        productExists.quantity--;
+        productExists.price--;
+    } else {
+        cart.push({ ...product, quantity: 1, price: product.product_price });
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
 
 
 
@@ -138,6 +151,7 @@ export function ProductCards() {
         hover:bg-yellow-400 shadow-md hover:text-xl
         "
         data-te-ripple-init
+        onClick={() => tradeIn(product)}
         data-te-ripple-color="light">
         Trade In
       </button>

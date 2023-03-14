@@ -48,7 +48,7 @@ const [dataResponse, setdataResponse] = useState([]);
     <QuickLinks></QuickLinks>
     <section className='container mx-20'>
        <div >
-        <h2 className="text-2xl py-10">Shop Games</h2>
+        <h2 className="text-4xl font-mainfont  pt-10 pb-2">Shop Games</h2>
 
 
 

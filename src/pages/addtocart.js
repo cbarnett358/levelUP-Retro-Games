@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useEffect, useState } from 'react';
 
@@ -7,6 +6,17 @@ function deleteCart() {
     localStorage.removeItem('cart');
     window.location.reload();
 }
+
+
+
+function cartItemsTotal (cart) {
+    let total = 0;
+    cart.map((product) => {
+        total += product.quantity;
+    })
+    return total;
+}
+
 
 
 export default function AddToCart() {
@@ -30,8 +40,11 @@ export default function AddToCart() {
 
       }, []);
     return (
-        <div>
-        <h1>Cart</h1>
+        <main className='bg-white
+        h-screen
+        '>
+        <div className='bg-light'>
+        <h1 className=' text-red'>Cart</h1>
         {cart.map((product) => {
             return (
                 <div key={product.product_id}>
@@ -42,11 +55,17 @@ export default function AddToCart() {
                 </div>
             );
         })}
-       <div>total: {total}</div>
 
-       <button onClick={deleteCart}>Delete Cart</button>
+       
+       <div>total: {total}</div>
+         <div>total products: {cartItemsTotal(cart)}</div>  
+
+       <button
+       className='mt-4 bg-secondary text-light font-mainfont text-xl p-1'
+       onClick={deleteCart}>Delete Cart</button>
 
         </div>
+        </main>
     );
     }
 

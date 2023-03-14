@@ -18,7 +18,7 @@ function HeroSection() {
           <h1 className="text-6xl md:text-7xl font-bold text-center text-secondary md:text-left 
           font-mainfont
           ">levelUP Your Collection</h1>
-          <p className="text-dark text-center mt-2 md:text-left">We buy and sell retro games and consoles. also trade in also trade in also trade in also trade in also trade in also trade in also trade in also trade in also trade in also trade in also trade in also trade in We also trade in games for cash or store credit.</p>
+          <p className="text-dark text-center mb-2 md:text-left">We buy and sell retro games and consoles. also trade in also trade in also trade in also trade in also trade in also trade in also trade in also trade in also trade in also trade in also trade in also trade in We also trade in games for cash or store credit.</p>
           <div className="flex flex-col md:flex-row justify-center items-center mt-4 space-x-4">
             <button className='
             bg-secondary
